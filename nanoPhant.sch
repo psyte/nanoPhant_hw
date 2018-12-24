@@ -21088,8 +21088,6 @@ Source: AVX .. aphvc.pdf</description>
 <text x="-2.3" y="-0.85" size="0.3048" layer="51" rot="R90">PCB Front</text>
 <text x="-1.27" y="5.969" size="0.4064" layer="25">&gt;NAME</text>
 <text x="-1.27" y="5.461" size="0.4064" layer="27">&gt;VALUE</text>
-<hole x="2.1" y="2" drill="0.8"/>
-<hole x="2.1" y="-2" drill="0.8"/>
 <pad name="P$1" x="-0.1" y="3.575" drill="1.1" diameter="1.5" shape="long"/>
 <pad name="P$2" x="-0.1" y="-3.575" drill="1.1" diameter="1.5" shape="long"/>
 <pad name="P$3" x="3.4" y="3.575" drill="1" diameter="1.5" shape="offset" rot="R180"/>
@@ -21121,7 +21119,7 @@ Source: AVX .. aphvc.pdf</description>
 <connects>
 <connect gate="G$1" pin="D+" pad="D+"/>
 <connect gate="G$1" pin="D-" pad="D-"/>
-<connect gate="G$1" pin="GND" pad="GND" route="any"/>
+<connect gate="G$1" pin="GND" pad="GND P$1 P$2 P$3 P$4 P$5" route="any"/>
 <connect gate="G$1" pin="ID" pad="ID"/>
 <connect gate="G$1" pin="VBUS" pad="VCC"/>
 </connects>
@@ -21149,8 +21147,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C13" library="SparkFun" deviceset="CAP_POL" device="1206" value="10uF"/>
 <part name="GND25" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND26" library="SparkFun" deviceset="GND" device=""/>
-<part name="R11" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="1K"/>
-<part name="LED1" library="SparkFun" deviceset="LED" device="0603" value="Red"/>
+<part name="R11" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="330"/>
+<part name="LED1" library="SparkFun" deviceset="LED" device="0603" value="Blue"/>
 <part name="GND28" library="SparkFun" deviceset="GND" device=""/>
 <part name="R2" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="10K"/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
@@ -21158,7 +21156,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="GND7" library="SparkFun" deviceset="GND" device=""/>
 <part name="R6" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="330"/>
-<part name="D3" library="SparkFun" deviceset="LED" device="0603" value="Green"/>
+<part name="LED3" library="SparkFun" deviceset="LED" device="0603" value="Red"/>
 <part name="P+11" library="SparkFun" deviceset="3.3V" device="" value="VCC"/>
 <part name="P+12" library="SparkFun" deviceset="3.3V" device="" value="VCC"/>
 <part name="GND4" library="SparkFun" deviceset="GND" device=""/>
@@ -21175,7 +21173,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1uF"/>
 <part name="GND9" library="SparkFun" deviceset="GND" device=""/>
 <part name="R4" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="330"/>
-<part name="D1" library="SparkFun" deviceset="LED" device="0603" value="Yellow"/>
+<part name="LED2" library="SparkFun" deviceset="LED" device="0603" value="Yellow"/>
 <part name="R5" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="22"/>
 <part name="R7" library="SparkFun" deviceset="RESISTOR" device="0603-RES" value="22"/>
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
@@ -21286,7 +21284,7 @@ http://creativecommons.org/licenses/by-sa/3.0</text>
 <attribute name="NAME" x="142.494" y="35.5346" size="1.524" layer="95"/>
 <attribute name="VALUE" x="148.082" y="35.306" size="1.524" layer="96"/>
 </instance>
-<instance part="D3" gate="G$1" x="160.02" y="38.1" smashed="yes" rot="R270">
+<instance part="LED3" gate="G$1" x="160.02" y="38.1" smashed="yes" rot="R270">
 <attribute name="NAME" x="163.576" y="40.132" size="1.524" layer="95" rot="R180"/>
 <attribute name="VALUE" x="160.528" y="36.195" size="1.524" layer="96"/>
 </instance>
@@ -21343,7 +21341,7 @@ http://creativecommons.org/licenses/by-sa/3.0</text>
 <attribute name="NAME" x="142.24" y="40.8686" size="1.524" layer="95"/>
 <attribute name="VALUE" x="147.828" y="40.386" size="1.524" layer="96"/>
 </instance>
-<instance part="D1" gate="G$1" x="160.02" y="43.18" smashed="yes" rot="R270">
+<instance part="LED2" gate="G$1" x="160.02" y="43.18" smashed="yes" rot="R270">
 <attribute name="NAME" x="163.576" y="45.466" size="1.524" layer="95" rot="R180"/>
 <attribute name="VALUE" x="160.274" y="41.021" size="1.524" layer="96"/>
 </instance>
@@ -21676,6 +21674,12 @@ http://creativecommons.org/licenses/by-sa/3.0</text>
 <wire x1="76.2" y1="78.74" x2="78.74" y2="78.74" width="0.1524" layer="91"/>
 <junction x="78.74" y="78.74"/>
 </segment>
+<segment>
+<wire x1="165.1" y1="76.2" x2="165.1" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+<pinref part="J7" gate="G$1" pin="2"/>
+<wire x1="167.64" y1="76.2" x2="165.1" y2="76.2" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="AREF" class="0">
 <segment>
@@ -21752,10 +21756,10 @@ http://creativecommons.org/licenses/by-sa/3.0</text>
 </segment>
 <segment>
 <pinref part="P+2" gate="1" pin="VCC"/>
-<pinref part="D3" gate="G$1" pin="A"/>
+<pinref part="LED3" gate="G$1" pin="A"/>
 <wire x1="162.56" y1="38.1" x2="167.64" y2="38.1" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="38.1" x2="167.64" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="A"/>
+<pinref part="LED2" gate="G$1" pin="A"/>
 <wire x1="167.64" y1="43.18" x2="167.64" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="43.18" x2="167.64" y2="43.18" width="0.1524" layer="91"/>
 <junction x="167.64" y="43.18"/>
@@ -21904,7 +21908,7 @@ http://creativecommons.org/licenses/by-sa/3.0</text>
 <net name="N$5" class="0">
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
-<pinref part="D1" gate="G$1" pin="C"/>
+<pinref part="LED2" gate="G$1" pin="C"/>
 <wire x1="152.4" y1="43.18" x2="154.94" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -21912,7 +21916,7 @@ http://creativecommons.org/licenses/by-sa/3.0</text>
 <segment>
 <wire x1="154.94" y1="38.1" x2="152.4" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="R6" gate="G$1" pin="2"/>
-<pinref part="D3" gate="G$1" pin="C"/>
+<pinref part="LED3" gate="G$1" pin="C"/>
 </segment>
 </net>
 <net name="TEMP1" class="0">
@@ -22153,14 +22157,6 @@ http://creativecommons.org/licenses/by-sa/3.0</text>
 <wire x1="27.94" y1="48.26" x2="30.48" y2="48.26" width="0.1524" layer="91"/>
 <junction x="27.94" y="48.26"/>
 <pinref part="J5" gate="G$1" pin="3"/>
-</segment>
-</net>
-<net name="N$11" class="1">
-<segment>
-<wire x1="167.64" y1="76.2" x2="165.1" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="76.2" x2="165.1" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="GND14" gate="1" pin="GND"/>
-<pinref part="J7" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$3" class="0">
